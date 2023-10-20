@@ -1,0 +1,123 @@
+html {
+  background: url(img/htmlbackground.jpg);
+  background-size: cover;
+}
+
+.container {
+  background: url(img/background.jpg);
+  background-position: 0 -230px;
+  height: 500px;
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.wolf {
+  position: relative;
+  top: 370px;
+  left: 150px;
+  height: 100px;
+  width: 120px;
+  background: url(img/wolfSpriteSheet.png);
+  background-position: 1745px -550px;
+  /* border: solid 3px darkgrseen; */
+
+  animation: wolfRunning 350ms linear;
+  animation-iteration-count: infinite;
+}
+
+.wolf.jumping {
+    animation: wolfJumping 1000ms linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes wolfRunning {
+  0% {
+    background-position: 0 -27px;
+  }
+  32.99% {
+    background-position: 0 -27px;
+  }
+  33% {
+    background-position: 1485px -155px;
+  }
+  65.99% {
+    background-position: 1485px -155px;
+  }
+  66% {
+    background-position: 810px -155px;
+  }
+  99.99% {
+    background-position: 810px -155px;
+  }
+}
+
+@keyframes wolfJumping {
+0% {
+    background-position: 1890px -410px;
+}
+49.9% {
+    background-position: 1890px -410px;
+}
+50% {
+    transform: translateY(-250px);
+    background-position: 1745px -550px;
+}
+99.9% {
+    transform: translateY(-0px);
+    background-position: 1745px -550px;
+}
+100% {
+    transform: translateY(-0px);
+}
+}
+
+.object {
+
+    background: url(img/imps.png);
+    background-position: -20px 5px;
+    height: 80px;
+    width: 70px;
+    /* border: solid 1px black; */
+ 
+    position: relative;
+    top: 285px;
+    right: -750px;
+
+    animation: objectMove 2.5s linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes objectMove {
+0% {
+
+}
+100% {
+    right: 100px;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ BACKGROND POSITIONS ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ 
+Still initial    background-position: 0 -27px;
+
+Running jump     background-position: 810px -155px;
+Running middle  background-position: 1485px -155px;
+
+Jumping up      background-position: 1890px -410px;
+Jumping down    background-position: 1745px -550px;
+
+
+*/
